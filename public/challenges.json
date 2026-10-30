@@ -1,0 +1,207 @@
+[
+  {
+    "id": "CR-01",
+    "title": "Piedra, papel o tijera",
+    "level": "easy",
+    "summary": "Dos participantes eligen piedra, papel o tijera. Escribe un programa que lea las dos elecciones y anuncie el resultado de la partida.",
+    "short": "Decide quién gana la partida.",
+    "conditions": [
+      "Las entradas serán palabras válidas: piedra, papel o tijera.",
+      "Si ambos eligen lo mismo, mostrar «Empate».",
+      "De lo contrario, mostrar «Jugador 1 gana» o «Jugador 2 gana» según las reglas tradicionales."
+    ],
+    "skills": [
+      "input() /variables / cadenas",
+      "Operadores lógicos y de comparación",
+      "Condicionales: if / elif / else"
+    ],
+    "input": "Jugador 1: piedra\nJugador 2: tijera",
+    "output": "Jugador 1 gana"
+  },
+  {
+    "id": "CR-02",
+    "title": "Pirámide de estrellas",
+    "level": "easy",
+    "summary": "Un astronauta necesita imprimir una señal luminosa con forma de pirámide. Construye un programa que reciba su altura y dibuje una pirámide centrada usando asteriscos.",
+    "short": "Dibuja una pirámide centrada.",
+    "conditions": [
+      "La altura será un entero entre 1 y 8.",
+      "La primera fila tendrá un asterisco y cada fila siguiente tendrá dos más que la anterior.",
+      "La pirámide deberá aparecer centrada mediante espacios iniciales."
+    ],
+    "skills": [
+      "Tipos de datos  y conversión",
+      "range()",
+      "Bucle for",
+      "Manipulación de cadenas",
+      "Operaciones aritméticas"
+    ],
+    "input": "Altura: 4",
+    "output": "   *\n  ***\n *****\n*******"
+  },
+  {
+    "id": "CR-03",
+    "title": "Among Us: encuentra al impostor",
+    "level": "medium",
+    "summary": "La tripulación ha votado para expulsar al sospechoso. Diseña un programa que cuente los votos, identifique al más votado y anuncie si hay empate.",
+    "short": "Cuenta votos y detecta empates.",
+    "conditions": [
+      "Utilizar la lista de votos proporcionada en el enunciado.",
+      "Si solo existe un jugador con el máximo de votos, anunciarlo y mostrar su cantidad.",
+      "Si varios jugadores comparten el máximo, imprimir los nombres empatados.",
+      "Se garantiza que la lista contiene al menos un voto."
+    ],
+    "skills": [
+      "Listas",
+      "Diccionarios",
+      "Bucle for",
+      "Métodos get(), max(), len() y join()",
+      "Condicionales: if-elif-else"
+    ],
+    "input": "votos = [\"Rojo\", \"Azul\", \"Rojo\",\n         \"Verde\", \"Rojo\", \"Azul\"]",
+    "output": "Expulsado: Rojo (3 votos)"
+  },
+  {
+    "id": "CR-04",
+    "title": "Hacker: recupera la transmisión",
+    "level": "medium",
+    "summary": "Un grupo de hackers intercepta una transmisión comprimida. Cada letra del mensaje está seguida por un número que indica cuántas veces debe aparecer. Desarrolla un programa en Python que recupere el mensaje original a partir de esta secuencia.",
+    "short": "Descomprime el mensaje interceptado.",
+    "conditions": [
+      "El código se recibe mediante input() y contiene pares consecutivos de una letra mayúscula seguida de un dígito entre 1 y 9.",
+      "Recorrer cada par y repetir la letra tantas veces como indique su número, conservando el orden original.",
+      "Mostrar el mensaje reconstruido y la cantidad total de caracteres obtenidos. Se garantiza que la entrada es válida."
+    ],
+    "skills": [
+      "Manipulación de cadenas",
+      "Indexación",
+      "Métodos len(), int()",
+      "range()",
+      "Bucle for",
+      "Concatenación y acumuladores"
+    ],
+    "input": "Código recibido: H1O1L1A3",
+    "output": "Mensaje recuperado: HOLAAA\nTotal de caracteres: 6"
+  },
+  {
+    "id": "CR-05",
+    "title": "Minecraft: crafteo de pedidos",
+    "level": "hard",
+    "summary": "En Minecraft, un jugador recibe un pedido de herramientas. El inventario indica los materiales disponibles y las recetas especifican los recursos necesarios para fabricar cada objeto. Desarrolle un programa que calcule el consumo total del pedido, compruebe si hay materiales suficientes y, solo si es posible fabricarlo completo, actualice el inventario.",
+    "short": "Comprueba recursos y fabrica el pedido.",
+    "conditions": [
+      "Representar el inventario, las recetas y el pedido mediante diccionarios. Las recetas deben estar dentro de un diccionario principal.",
+      "Calcular el total de cada material requerido, considerando las cantidades solicitadas de cada objeto.",
+      "Verificar todos los recursos antes de descontar materiales. Si falta alguno, el inventario debe mantenerse intacto.",
+      "Mostrar si el pedido fue fabricado y el inventario final. Un material ausente se considera disponible en cantidad cero."
+    ],
+    "skills": [
+      "Diccionarios simples y anidados",
+      "Bucle for anidado",
+      "Método get()",
+      "Acumuladores y actualización de valores",
+      "Condicionales: if-elif-else"
+    ],
+    "input": "inventario = {\"madera\": 12, \"piedra\": 7, \"hierro\": 4}\nrecetas = {\n  \"pico\": {\"madera\": 2, \"piedra\": 3},\n  \"espada\": {\"madera\": 1, \"hierro\": 2}\n}\npedido = {\"pico\": 2, \"espada\": 1}",
+    "output": "Pedido fabricado\nInventario final:\n{'madera': 7, 'piedra': 1, 'hierro': 2}"
+  },
+  {
+    "id": "CR-06",
+    "title": "Mario Kart",
+    "level": "easy",
+    "summary": "Un jugador acaba de terminar una carrera de 3 vueltas. Escribe un programa que reciba los tiempos exactos de cada vuelta, calcule el tiempo total de la carrera y encuentre cuál fue la vuelta más rápida",
+    "short": "Calcula el total y la vuelta más rápida.",
+    "conditions": [
+      "Recibir 3 números decimales correspondientes a los tiempos en segundos.",
+      "Almacenarlos en una lista.",
+      "Mostrar el tiempo total de la carrera y el menor tiempo registrado"
+    ],
+    "skills": [
+      "input(), float()",
+      "Listas",
+      "Métodos sum(), min()"
+    ],
+    "input": "Vuelta 1: 45.5\nVuelta 2: 42.1\nVuelta 3: 43.0",
+    "output": "Tiempo total: 130.6\nVuelta más rápida: 42.1"
+  },
+  {
+    "id": "CR-07",
+    "title": "El Relevo Cifrado",
+    "level": "easy",
+    "summary": "En una carrera de relevos de espías, se debe pasar un mensaje secreto. Para evitar que el enemigo lo lea, cada vocal del texto original debe ser cambiada por un símbolo: a → @, e → 3, i → 1, o → 0, u → #. Escribe un programa que reciba un texto y lo cifre",
+    "short": "Cambia las vocales por símbolos.",
+    "conditions": [
+      "El texto de entrada debe convertirse a minúsculas antes de procesarse.",
+      "Las consonantes y espacios se mantienen igual.",
+      "El equipo debe construir la nueva cadena letra por letra"
+    ],
+    "skills": [
+      "input(), lower()",
+      "Bucle for",
+      "Diccionarios",
+      "Condicionales: if-elif-else",
+      "Concatenación y manipulación de cadenas"
+    ],
+    "input": "Mensaje: Hola Equipo",
+    "output": "Mensaje secreto: h0l@ 3q#1p0"
+  },
+  {
+    "id": "CR-08",
+    "title": "Batalla Pokémon",
+    "level": "medium",
+    "summary": "En una batalla, el daño de un ataque depende de los tipos. Escribe un programa que reciba el tipo de ataque, el tipo del Pokémon defensor y el daño base. Si el ataque es \"súper efectivo\", el daño se multiplica por 2. Si es \"poco efectivo\", se divide a la mitad (división entera). Si no hay relación, el daño queda igual",
+    "short": "Calcula la efectividad y el daño.",
+    "conditions": [
+      "Solo existen 3 tipos para el reto: Agua, Fuego y Planta.",
+      "Relaciones: Fuego es súper efectivo contra Planta. Planta contra Agua. Agua contra Fuego. (El inverso es poco efectivo).",
+      "Se debe mostrar la efectividad y el daño final calculado."
+    ],
+    "skills": [
+      "Diccionarios",
+      "Condicionales: if-elif-else",
+      "Operaciones aritméticas"
+    ],
+    "input": "Ataque: Agua\nDefensor: Fuego\nDaño base: 40",
+    "output": "¡Súper efectivo!\nDaño final: 80"
+  },
+  {
+    "id": "CR-09",
+    "title": "El inventario de Zelda",
+    "level": "medium",
+    "summary": "Link encuentra un cofre lleno de objetos (representados por sus pesos en una lista). Su alforja tiene un límite máximo de peso de 15 kg. Escribe un programa que recoja los objetos en orden hasta que el siguiente objeto haga que supere su límite de peso, momento en el que debe detenerse",
+    "short": "Recoge objetos sin superar el límite.",
+    "conditions": [
+      "Usar una lista predefinida de pesos: objetos = [5, 3, 4, 6, 2]",
+      "Sumar los pesos uno por uno comprobando que no supere el límite.",
+      "Imprimir cuántos objetos logró recoger y el peso total acumulado."
+    ],
+    "skills": [
+      "Listas",
+      "Bucles for y while / break",
+      "Variables acumuladoras",
+      "Condicionales: if-elif-else"
+    ],
+    "input": "Límite: 15\nPesos: [5, 3, 4, 6, 2]",
+    "output": "Objetos recogidos: 3\nPeso total en alforja: 12"
+  },
+  {
+    "id": "CR-10",
+    "title": "Tetris",
+    "level": "hard",
+    "summary": "Representamos un tablero de Tetris como una matriz de 4x4 donde 0 es un espacio vacío y 1 es un bloque. Si una fila completa está llena de unos ([1, 1, 1, 1]), debe ser eliminada del tablero. Por cada fila eliminada, se debe insertar una fila nueva de ceros ([0, 0, 0, 0]) en la parte superior. Escribe un programa que actualice el tablero",
+    "short": "Elimina las filas completas del tablero.",
+    "conditions": [
+      "Iterar sobre las filas de la matriz inicial.",
+      "Si la suma de la fila es menor a 4, conservarla. Si es 4, ignorarla (eliminarla).",
+      "Rellenar la matriz resultante en la posición 0 con filas de ceros hasta que vuelva a tener 4 filas de alto."
+    ],
+    "skills": [
+      "Listas de listas",
+      "Método sum",
+      "Métodos de listas (append(), insert() o count())",
+      "Bucles iterativos sobre matrices"
+    ],
+    "input": "tablero = [\n  [0, 1, 0, 0],\n  [1, 1, 1, 1],\n  [0, 1, 1, 0],\n  [1, 1, 1, 1]\n]",
+    "output": "Tablero actualizado:\n[0, 0, 0, 0]\n[0, 0, 0, 0]\n[0, 1, 0, 0]\n[0, 1, 1, 0]"
+  }
+]

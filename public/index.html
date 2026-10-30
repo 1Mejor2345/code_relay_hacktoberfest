@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Code Relay · Hacktoberfest × IEEE HKN Nu Zeta</title>
+  <meta name="description" content="Tablero de retos de programación en Python para proyectar en Code Relay de Hacktoberfest. Retos fáciles, intermedios y difíciles.">
+  <meta name="theme-color" content="#1a1612">
+  <link rel="icon" href="assets/emblem.png"><link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script><script src="music.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="event-lockup" href="#" aria-label="Volver al tablero de Code Relay"><img src="assets/event.svg" alt="Hacktoberfest × IEEE HKN Nu Zeta"></a>
+    <div class="header-actions">
+      <button class="quiet" id="back" hidden>← Tablero de retos</button>
+      <button class="icon-button" id="fullscreen" aria-label="Pantalla completa" title="Pantalla completa (F)">⛶</button>
+      <details class="sound-menu" id="sound-menu">
+        <summary aria-label="Ajustar música" title="Música del torneo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M11 4 5 9H2v6h3l6 5V4Z" fill="currentColor"/><g class="speaker-waves" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M15 8c2 2 2 6 0 8M18 5c4 4 4 10 0 14"/></g><path class="speaker-muted" d="m16 9 6 6m0-6-6 6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></summary>
+        <div class="sound-popover"><label for="volume">Música del torneo <output id="volume-value">25%</output></label><input id="volume" type="range" min="0" max="1" step="0.05" value="0.25"><div class="sound-bottom"><button id="music-mute" class="quiet" aria-pressed="false">Silenciar</button><span id="music-status" role="status">Lista para sonar</span></div></div>
+      </details><audio id="music-audio" preload="metadata" hidden></audio>
+    </div>
+  </header>
+  <main>
+    <section id="board" aria-labelledby="board-title">
+      <div class="board-heading"><div><p class="eyebrow">EL TORNEO DE PROGRAMACIÓN · PYTHON</p><h1 id="board-title">Code <span>Relay</span></h1><p class="subtitle">Un equipo. Una pizarra. Un gran reto.</p></div><div class="board-seal" aria-label="10 retos, 3 dificultades"><strong>10</strong><span>retos para conquistar</span><div>✦ &nbsp; 3 dificultades &nbsp; ✦</div></div></div>
+      <div class="board-rule"><span>✦</span><p>Elige un reto y escribe tu programa en la pizarra</p><span>✦</span></div>
+      <div class="challenge-columns" id="challenge-columns"><p role="status">Cargando retos…</p></div>
+      <div class="board-note"><span>Python · Trabajo en equipo · Búsquedas en línea permitidas</span><span>Selecciona un reto para proyectar su enunciado ↗</span></div>
+    </section>
+    <section id="challenge" hidden aria-labelledby="challenge-title" tabindex="-1">
+      <div class="detail-heading"><div><p class="eyebrow" id="challenge-meta"></p><h1 id="challenge-title"></h1></div><span class="level-badge" id="challenge-level"></span></div>
+      <p class="statement" id="statement"></p>
+      <div class="detail-grid"><section class="frame conditions"><h2>Tu misión</h2><ol id="conditions"></ol><p class="skills" id="skills"></p></section><section class="frame example"><h2>Ejemplo</h2><p class="code-label">ENTRADA / DATOS INICIALES</p><pre id="example-input"></pre><p class="code-label">SALIDA ESPERADA</p><pre id="example-output"></pre></section></div>
+      <nav class="detail-navigation" aria-label="Cambiar reto"><button class="quiet" id="prev">← Reto anterior</button><span id="position"></span><button class="quiet" id="next">Reto siguiente →</button></nav>
+    </section>
+    <noscript><p>Activa JavaScript para mostrar el tablero de retos.</p></noscript>
+  </main>
+  <footer><div class="footer-copy"><span>HACKTOBERFEST · CODE RELAY</span><small>IEEE HKN Nu Zeta · ESPOL</small></div><div class="allies" aria-label="Comunidad del evento"><img src="assets/chapter.png" alt="IEEE HKN Nu Zeta"><img src="assets/mlh.png" alt="Major League Hacking"><img src="assets/google.png" alt="Google for Developers"></div><span class="keyboard-hint">F · Pantalla completa &nbsp; / &nbsp; Esc · Tablero</span></footer>
+  <p id="notice" role="status" hidden></p>
+</body>
+</html>
